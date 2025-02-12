@@ -1,0 +1,838 @@
+/************************************* Whole Default Body Styling *************************************/
+body 
+{
+    background: white;
+    font-size: 16px;
+    font-family: "PT Serif", Georgia, serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 28px;
+    color: #777777;
+}
+
+h2
+{
+    font-family: "Raleway", sans-serif;
+    color: white;
+}
+
+a
+{
+    /* Remove the underline of the links */
+    text-decoration: none;
+}
+
+/* Grid Styling ( For Responsiveness ) */
+
+.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-10, .col-sm-10, .col-md-10, 
+.col-lg-10, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-7, .col-sm-7, .col-md-7, 
+.col-lg-7, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-4, .col-sm-4, .col-md-4, 
+.col-lg-4, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 
+{
+    position: relative; 
+    min-height: 1px; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+}
+
+
+.col-md-1 { width: 8.33333%; }
+.col-md-2 { width: 16.66667%; }
+.col-md-3 { width: 25%; }
+.col-md-4 { width: 33.33333%; }
+.col-md-5 { width: 41.66667%; }
+.col-md-6 { width: 50%; }
+.col-md-7 { width: 58.33333%; }
+.col-md-8 { width: 66.66667%; }
+.col-md-9 { width: 75%; }
+.col-md-10 { width: 83.33333%; }
+.col-md-11 { width: 91.66667%; }
+.col-md-12 { width: 100%; }
+
+
+.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 { position: relative; min-height: 1px; padding-left: 20px; padding-right: 20px; }
+
+.col-xs-12, .col-xs-11, .col-xs-10, .col-xs-9, .col-xs-8, .col-xs-7, .col-xs-6, .col-xs-5, .col-xs-4, .col-xs-3, .col-xs-2, .col-xs-1 { float: left; }
+
+.col-xs-1 { width: 8.33333%; }
+
+.col-xs-2 { width: 16.66667%; }
+
+.col-xs-3 { width: 25%; }
+
+.col-xs-4 { width: 33.33333%; }
+
+.col-xs-5 { width: 41.66667%; }
+
+.col-xs-6 { width: 50%; }
+
+.col-xs-7 { width: 58.33333%; }
+
+.col-xs-8 { width: 66.66667%; }
+
+.col-xs-9 { width: 75%; }
+
+.col-xs-10 { width: 83.33333%; }
+
+.col-xs-11 { width: 91.66667%; }
+
+.col-xs-12 { width: 100%; }
+
+
+/************************************* Responsive Menu Before Header ( For Smaller Screens ) *************************************/
+.responsive_menu 
+{
+    padding: 20px;
+    background-color: rgba(49, 55, 58, 0.98);
+    display: none;
+    position: relative;
+    z-index: 9999;
+}
+
+.main-nav ul, .main_menu, .main_menu li ul 
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main_menu li 
+{
+    border-bottom: 1px solid #485156;
+    padding: 10px 0;
+  
+}
+
+.main_menu li:first-child 
+{
+    padding-top: 0;
+} 
+  
+.main_menu li:last-child 
+{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.main_menu li a 
+{
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    color: #bfbfbf;
+    font-weight: 500;
+}
+
+.main_menu li ul li 
+{
+    margin-left: 20px;
+}
+ 
+.main_menu li ul li:first-child 
+{
+    border-top: 1px solid #485156;
+    padding-top: 8px;
+    margin-top: 10px;
+}
+
+.main_menu li ul li:before 
+{
+    content: '-';
+    color: gray;
+    margin-right: 10px;
+}
+
+
+/************************************* Header Bar *************************************/
+/* Header Styling */
+.site-header 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height : 3%;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px;
+    z-index: 9999;
+    padding: 40px 0;
+    transition: padding 0.3s ease-in-out;
+    justify-content: center;
+}
+
+/* Flexbox for Alignment */
+.site-header .row 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Prevent wrapping */
+    flex-wrap: nowrap; 
+}
+
+/* Logo Styling */
+.logo 
+{
+    margin-left: 20%;
+    display: flex;
+    align-items: center;
+    /* Space between logo and menu */
+    margin-right: 300px; 
+}
+
+.logo img 
+{
+    max-height: 40px; /* Adjust if needed */
+    width: auto;
+}
+
+/* Navigation Styling */
+.main-navigation 
+{
+    display: flex;
+    flex-grow: 1;
+    /* Align closer to the logo */
+    justify-content: flex-start; 
+
+}
+
+.main-nav ul 
+{
+    display: flex;
+    /* Ensures vertical alignment */
+    align-items: center;
+}
+
+.main-nav ul li 
+{
+    position: relative;
+    margin-left: 30px;
+}
+
+/* Dropdown Menu */
+.main-nav ul li ul 
+{
+    position: absolute;
+    display: none;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    margin-top: 5px;
+    width: 220px;
+    border: 2px solid #f1f4f5;
+}
+
+.main-nav ul li ul li 
+{
+    width: 100%;
+    border-bottom: 1px solid #dce4e6;
+}
+
+.main-nav ul li ul li:last-child 
+{
+    border-bottom: none;
+}
+
+.main-nav ul li:hover > ul 
+{
+    display: block;
+}
+
+/* Menu Links */
+.main-nav ul li a 
+{
+    color: #31373a;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 3px;
+}
+
+.main-nav ul li a:hover, .main-nav ul li ul li a:hover, .main-nav ul li.active a , .service-icon-wrap i , .service-content-wrap a
+{
+    color: #00a8d6;
+}
+
+.main-nav ul li.active a 
+{
+    background-color: #f1f4f5;
+}
+
+/* Style Dropdown Indicator */
+.main-nav li.dropdown > a 
+{
+    position: relative;
+    /* Add space for arrow */
+    padding-right: 17px; 
+}
+
+/* Add Down Arrow */
+.main-nav li.dropdown > a::after 
+{
+    /* Unicode down arrow */
+    content: "▼"; 
+    font-size: 12px;
+    /* Match text color */
+    color: #31373a; 
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.main-nav ul li ul li a 
+{
+    background-color: transparent;
+    color: #777777;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+/* Adjust for Shrinking Header */
+.site-header.site-header-shrink 
+{
+    padding: 15px 0;
+}
+
+
+/* Style for Menu Button (☰) */
+/* .menu-toggle-btn {
+    display: none; /* Initially hidden 
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: #333;
+    color: white;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10000; /* Ensure it's on top 
+}
+
+/* Show menu button on small screens 
+@media (max-width: 1010px) {
+    .menu-toggle-btn {
+        display: block !important;
+    }
+
+    .site-header {
+        display: none !important;
+    }
+
+    /* Responsive menu positioning 
+    .responsive_menu {
+        display: none;
+        position: fixed;
+        top: 60px;
+        right: 15px;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        z-index: 9999;
+    }
+} */
+
+
+/************************************* Home Intro Section ( Header image )  *************************************/
+#homeIntro 
+{
+    background-image: url("homeintro.jpg");
+    height: 30%;
+}
+
+.home-header
+{
+    position: relative;
+    margin-top: 108px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+    overflow: hidden;
+}
+
+.home-intro-container 
+{
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.home-intro-content 
+{
+    padding: 11em 0;
+    text-align: center;
+}
+  
+.home-intro-content h2 
+{
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.home-intro-content p 
+{
+    margin: 55px 0;
+    font-size: 18px;
+    line-height: 32px;
+}
+  
+.home-intro-content .download-button:hover 
+{
+    opacity: 0.8;
+}
+
+.download-button 
+{
+    padding: 15px 20px;
+    font-size: 12px;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    /* -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px; */
+    border-radius: 2px;
+    margin-left: 15px;
+}
+  
+a.download-button
+{
+    color: #31373a;
+    background-color: white;
+}
+
+/* Download icon in dowload free button */
+i 
+{
+    margin-left: 17px;
+    line-height: 1;
+    font-weight: 2px;
+    font-size: 14px; 
+    color: rgb(55, 54, 54); 
+}
+
+
+/************************************* Home Intro Section ( The bar below the header image )  *************************************/
+#cta 
+{
+    padding: 35px 0;
+    border-bottom: 1px solid #dce4e6;
+    text-align: center;
+    color: black;
+}
+
+.cta .cta-title 
+{
+    display: inline-block;
+    margin: 0 50px 0 0;
+    font-size: 16px;
+}
+
+/* cta --> Call To Action To Visit the website to download the template from it */
+.cta-button 
+{
+    padding: 12px 15px;
+    font-size: 12px;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    /* -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px; */
+    border-radius: 2px;
+}
+  
+a.cta-button.accent-color 
+{
+    background-color: #00a8d6;
+}
+  
+a.cta-button.accent-color:hover 
+{
+    background-color: #31373a;
+}
+
+a.cta-button.accent-color  , .fa-arrow-right
+{
+    color: white;
+}
+
+
+/************************************* Services *************************************/
+#services
+{
+    background-color: white;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.service-container
+{
+    flex-direction: column;
+    align-items: center; 
+    max-width: 1100px; 
+    width: 100%;
+}
+
+.service-row
+{
+    display: flex;
+    gap: 30px; 
+}
+
+.service-box-wrap 
+{
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.service-icon-wrap 
+{
+    display: block;
+}
+
+.service-content-wrap p
+{
+    margin: 0 0 20px 0;
+}
+  
+.service-title 
+{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 30px 0 20px 0;
+    color: black;
+}
+
+/************************************* Portfolio *************************************/
+#portfolio
+{
+    background-color: #31373a;
+    padding: 55px;
+
+    background-color: #31373a;
+    text-align: center;
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.portfolio-title
+{
+    text-align: center;
+    justify-content: center;
+}
+
+.portfolio-title h2 
+{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.portfolio-title p
+{
+    color: #aaaaaa;
+    font-size: 15px;
+    margin: 0 0 50px 0
+}
+
+/* Image Slideshow */
+.cards-container 
+{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: auto;
+    flex-wrap: nowrap;
+    display: grid;
+}
+
+.cards 
+{
+    transition: transform 2s ease-in-out;
+    justify-content: center;
+    display: flex;
+}
+
+.card 
+{
+    /* Ensures overlay is relative to each card */
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-wrapper 
+{
+    /* Ensures overlay is within the wrapper */
+    position: relative; 
+    width: 380px;
+    height: 300px;
+    overflow: hidden;
+    /* bottom: 0; */
+    text-align: left;
+}
+
+.image-wrapper img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Overlay styles */
+.overlay 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00a8d6; /* Semi-transparent overlay */
+    display: flex;
+    flex-direction: column;
+
+    /* Align content to left */
+    /* align-items: flex-start;  */
+    /* Align content to bottom */
+    justify-content: flex-end; 
+
+
+    /* align-items: center; */
+    /* justify-content: center; */
+    color: white;
+    transform: scale(0); /* Initially hidden */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.image-wrapper:hover .overlay 
+{
+    /* Overlay appears on hover */
+    transform: scale(1); 
+}
+
+/* Styling for overlay text */
+.overlay span, .overlay h3 
+{
+    /* padding : top-right-bottom-left */
+    padding-left: 20px; 
+    padding-bottom: 10px;
+
+    /* margin-left: 20px; */
+    /* margin-top: 10px; */
+    margin: 0px;
+    font-size: 15px;
+    /* text-align: left; */
+}
+
+.overlay h3 a 
+{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/************************************* Feedbacks Section *************************************/
+/* Slideshow container */
+#feedback-container 
+{
+    background-color: #f1f4f5;
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.feedback-slide 
+{
+    display: none;
+    padding: 40px;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.feedback-slide.active 
+{
+    opacity: 1;
+}
+
+.author 
+{
+    /* margin-bottom: 20px; */
+    color: #aaaaaa;
+}
+
+.feedback
+{
+    font-weight: 3px;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.dot-container 
+{
+    text-align: center;
+    padding: 20px;
+}
+
+.dot 
+{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: 0.5px solid black;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle and upon hovering */
+.active, .dot:hover 
+{
+    background-color: #00a8d6;
+}
+
+
+/************************************* Team Members Section *************************************/
+#team-container 
+{
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Team Members Grid */
+.team-members 
+{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.team-title h2 
+{
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.team-title p 
+{
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+
+
+/* Individual Member Card */
+.team-member 
+{
+    width: 350px;
+    text-align: center;
+}
+
+/* Image Styling */
+.team-member img 
+{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+/* Role Tag Styling */
+.member-info 
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.member-role 
+{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    display: inline-block;
+    color: #565252;
+}
+
+/* Member Content ( name , description ) */
+.member-content 
+{
+    padding: 5px;
+    text-align: left;
+}
+
+.member-name 
+{
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+    padding: 3px 5px;
+    color: black;
+}
+
+
+/************************************* Footer *************************************/
+.site-footer 
+{
+    background-color: #f1f4f5;
+    padding: 100px 0;
+    color: #aaaaaa;
+    font-family: "Raleway", sans-serif;
+}
+
+.footer-menu, .copyright-text 
+{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.copyright-text
+{
+    margin-top: 40px;
+}
+
+/* Make the menu items inline */
+.footer-menu 
+{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    /* Spacing between menu items */
+    gap: 20px; 
+}
+
+/* Styling for menu items */
+.footer-menu li 
+{
+    display: inline-block;
+}
+
+/* Styling for menu links */
+.footer-menu li a 
+{
+    color: grey;
+    padding: 5px 20px;
+    transition: color 0.3s ease;
+}
