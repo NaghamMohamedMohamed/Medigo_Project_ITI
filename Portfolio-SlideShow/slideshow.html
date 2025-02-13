@@ -11,82 +11,64 @@
     />
   </head>
   <body>
-    <!-------------------------------- Responsive Menu Before Header -------------------------------->
+     <div class="menu-toggle-btn" onclick="toggleMenu()">&#9776;</div>
+    <section id="responsive_menu">
+        <ul>
+            <li><a href="../Home Page/home_page.html">Home</a></li>
+            <li><a href="#">Portfolio</a>
+                <ul>
+                    <li><a href="../Portfolio-Grid/grid.html">- Portfolio Grid</a></li>
+                    <li><a href="../Portfolio-projectImage/projectImage.html">- Project Image</a></li>
+                    <li><a href="../Portfolio-SlideShow/slideshow.html">- Project Slideshow</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Blog</a>
+                <ul>
+                    <li><a href="#">- Blog Standard</a></li>
+                    <li><a href="#">- Blog Single</a></li>
+                    <li><a href="#">- Visit Templatemo</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Archives</a></li>
+            <li><a href="../contact/contact.html">Contact</a></li>
+        </ul>
+    </section>
 
-    <div class="responsive_menu">
-      <ul class="main_menu">
-        <li><a href="home_page.html">Home</a></li>
-        <li>
-          <a href="#">Portfolio</a>
-          <ul>
-            <li><a href="portfolio.html">Portfolio Grid</a></li>
-            <li><a href="project-image.html">Project Image</a></li>
-            <li><a href="project-slideshow.html">Project Slideshow</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Blog</a>
-          <ul>
-            <li><a href="#">Blog Standard</a></li>
-            <li><a href="#">Blog Single</a></li>
-            <li><a href="#">visit templatemo</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Archives</a></li>
-        <li><a href="../contact/contact.html">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-------------------------------- Header Bar -------------------------------->
-
+	<!-------------------------------- Header Bar -------------------------------->
     <header class="site-header">
-      <div class="container">
-        <div class="row">
-          <!-- <div class="col-md-12"> -->
-          <div class="logo">
-            <a href="home_page.html">
-              <img src="../images/logo.png" alt="Medigo by templatemo" />
-            </a>
-          </div>
+        <div class="container">
+			<div class="row">
+				<div class="logo">
+					<a href="../Home Page/home_page.html">
+						<img src="../images/logo.png" alt="Medigo by templatemo">
+					</a>
+				</div>	
 
-          <div class="main-navigation">
-            <nav class="main-nav">
-              <ul class="sf-menu">
-                <li class="active"><a href="home_page.html">Home</a></li>
-
-                <li class="dropdown">
-                  <a href="#">Portfolio</a>
-                  <ul>
-                    <li><a href="portfolio.html">Portfolio Grid</a></li>
-                    <li><a href="project-image.html">Project Image</a></li>
-                    <li>
-                      <a href="project-slideshow.html">Project Slideshow</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="dropdown">
-                  <a href="#">Blog</a>
-                  <ul>
-                    <li><a href="#">Blog Standard</a></li>
-                    <li><a href="#">Blog Single</a></li>
-                    <li><a href="#">visit templatemo</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Archives</a></li>
-                <li><a href="../contact/.contact.html">Contact</a></li>
-              </ul>
-            </nav>
-            <!------- This is the responsive menu for tablet and mobiles ------->
-            <!-- <div class="responsive-navigation">
-                                  <a href="#nogo" class="menu-toggle-btn">
-                                      <i class="fa fa-bars"></i>
-                                  </a>
-                              </div> -->
-          </div>
-          <!-- </div> -->
-        </div>
-      </div>
+				<div class="main-navigation">
+					<nav class="main-nav">
+						<ul>
+							<li class="active"><a href="../Home Page/home_page.html">Home</a></li>
+							<li class="dropdown"><a href="#">Portfolio</a>
+								<ul>
+									<li><a href="../Portfolio-Grid/grid.html">Portfolio Grid</a></li>
+									<li><a href="../Portfolio-projectImage/projectImage.html">Project Image</a></li>
+									<li><a href="../Portfolio-SlideShow/slideshow.html">Project Slideshow</a></li>
+								</ul>
+							</li>
+							<li class="dropdown"><a href="#">Blog</a>
+								<ul>
+									<li><a href="#">Blog Standard</a></li>
+									<li><a href="#">Blog Single</a></li>
+									<li><a href="#">Visit Templatemo</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Archives</a></li>
+							<li><a href="../contact/contact.html">Contact</a></li>
+						</ul>
+					</nav> 
+				</div> 
+			</div> 
+		</div> 
     </header>
     <!-------------------------------- Hero Section -------------------------------->
 
@@ -215,24 +197,22 @@
     </div>
     <!-------------------------------- Footer -------------------------------->
 
-    <footer class="site-footer">
-      <div class="col-md-12">
-        <nav class="footer-nav">
-          <ul class="footer-menu">
-            <li><a href="home_page.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="#">Blog Posts</a></li>
-            <li><a href="#">Shortcodes</a></li>
-            <li><a href="../contact/contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="col-md-12">
-        <p class="copyright-text">
-          Copyright &copy; 2084 Company Name | Design: templatemo
-        </p>
-      </div>
-    </footer>
+      <footer class="site-footer">
+		<div class="col-md-12">
+			<nav class="footer-nav">
+				<ul class="footer-menu">
+					<li><a href="../Home Page/home_page.html">Home</a></li>
+					<li><a href="../Portfolio-Grid/grid.html">Portfolio</a></li>
+					<li><a href="#">Blog Posts</a></li>
+					<li><a href="#">Shortcodes</a></li>
+					<li><a href="../contact/contact.html">Contact</a></li>
+				</ul> 
+			</nav> 
+		</div> 
+		<div class="col-md-12">
+			<p class="copyright-text">Copyright &copy; 2084 Company Name | Design: templatemo</p>
+		</div> 
+	</footer> 
     <script src="script.js"></script>
   </body>
 </html>
