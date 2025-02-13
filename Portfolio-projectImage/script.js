@@ -1,5 +1,4 @@
 /*************************** For responsive icon navigation menu and it's navigation menus for smaller screens ***************************/
-
 function toggleMenu() 
 {
     var menu = document.getElementById("responsive_menu");
