@@ -240,7 +240,7 @@ a
 /************************************* Home Intro Section ( Header image )  *************************************/
 #homeIntro 
 {
-    background-image: url("homeintro.jpg");
+    background-image: url("../images/homeintro.jpg");
     height: 30%;
 }
 
