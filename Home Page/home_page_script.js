@@ -1,114 +1,46 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//     function checkWindowSize() {
-//         let siteHeader = document.querySelector(".site-header");
-//         let menuToggle = document.querySelector(".menu-toggle-btn");
-//         let responsiveMenu = document.querySelector(".responsive_menu");
+/*************************** For responsive icon navigation menu and it's navigation menus for smaller screens ***************************/
 
-//         if (window.innerWidth <= 1010) {
-//             siteHeader.style.display = "none"; // Hide site header
-//             menuToggle.style.display = "block"; // Show menu toggle button
-//         } else {
-//             siteHeader.style.display = "block"; // Show site header
-//             menuToggle.style.display = "none"; // Hide menu toggle button
-//             responsiveMenu.style.display = "none"; // Ensure menu is hidden when resizing back
-//         }
-//     }
+function toggleMenu() 
+{
+    var menu = document.getElementById("responsive_menu");
 
-//     // Run checkWindowSize initially and on window resize
-//     checkWindowSize();
-//     window.addEventListener("resize", checkWindowSize);
+    // Toggle menu visibility
+    if (menu.style.display === "block") 
+    {
+        menu.style.display = "none";
+    } 
+    else 
+    {
+        menu.style.display = "block";
+    }
+}
 
-//     // Toggle responsive menu on button click
-//     document.querySelector(".menu-toggle-btn").addEventListener("click", function () {
-//         let menu = document.querySelector(".responsive_menu");
-//         if (menu.style.display === "none" || menu.style.display === "") {
-//             menu.style.display = "block"; // Show the menu
-//         } else {
-//             menu.style.display = "none"; // Hide the menu
-//         }
-//     });
-// });
+// Hide menu when mouse leaves it
+document.getElementById("responsive_menu").addEventListener("mouseleave", function () {
+    this.style.display = "none";
+});
 
+// Hide menu when clicking outside
+document.addEventListener("click", function (event) {
+    var menu = document.getElementById("responsive_menu");
+    var toggleBtn = document.querySelector(".menu-toggle-btn");
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     function checkWindowSize() {
-//         let siteHeader = document.querySelector(".site-header");
-//         let menuToggle = document.querySelector(".menu-toggle-btn");
-//         let responsiveMenu = document.querySelector(".responsive_menu");
+    // Close the menu only if clicking outside of it and the toggle button
+    if (!menu.contains(event.target) && !toggleBtn.contains(event.target))     
+    {
+        menu.style.display = "none";
+    }
+});
 
-//         if (!siteHeader || !menuToggle || !responsiveMenu) {
-//             console.error("One or more elements not found!");
-//             return;
-//         }
-
-//         if (window.innerWidth <= 1010) {
-//             siteHeader.style.display = "none"; // Hide the main header
-//             menuToggle.style.display = "block"; // Show menu toggle button
-//         } else {
-//             siteHeader.style.display = "block"; // Show main header
-//             menuToggle.style.display = "none"; // Hide menu toggle button
-//             responsiveMenu.style.display = "none"; // Ensure menu is hidden when resizing back
-//         }
-//     }
-
-//     // Initial check and resize event
-//     checkWindowSize();
-//     window.addEventListener("resize", checkWindowSize);
-
-//     // Toggle responsive menu when clicking the menu button
-//     document.querySelector(".menu-toggle-btn").addEventListener("click", function (event) {
-//         event.preventDefault(); // Prevent default anchor behavior
-//         let menu = document.querySelector(".responsive_menu");
-//         if (menu.style.display === "none" || menu.style.display === "") {
-//             menu.style.display = "block"; // Show menu
-//         } else {
-//             menu.style.display = "none"; // Hide menu
-//         }
-//     });
-// });
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     function checkWindowSize() {
-//         let siteHeader = document.querySelector(".site-header");
-//         let menuToggle = document.querySelector(".menu-toggle-btn");
-//         let responsiveMenu = document.querySelector(".responsive_menu");
-
-//         if (!siteHeader || !menuToggle || !responsiveMenu) {
-//             console.error("One or more elements not found!");
-//             return;
-//         }
-
-//         console.log("Window width:", window.innerWidth); // Debugging line
-
-//         if (window.innerWidth <= 1010) {
-//             siteHeader.style.display = "none"; // Hide main header
-//             menuToggle.style.display = "block"; // Show menu toggle button
-//         } else {
-//             siteHeader.style.display = "block"; // Show main header
-//             menuToggle.style.display = "none"; // Hide menu toggle button
-//             responsiveMenu.style.display = "none"; // Hide menu when resizing back
-//         }
-//     }
-
-//     // Run function on page load and window resize
-//     checkWindowSize();
-//     window.addEventListener("resize", checkWindowSize);
-
-//     // Toggle menu when button is clicked
-//     document.querySelector(".menu-toggle-btn").addEventListener("click", function (event) {
-//         event.preventDefault(); // Prevent default behavior
-//         let menu = document.querySelector(".responsive_menu");
-//         if (menu.style.display === "none" || menu.style.display === "") {
-//             menu.style.display = "block"; // Show menu
-//         } else {
-//             menu.style.display = "none"; // Hide menu
-//         }
-//     });
-// });
+// Prevent the menu from closing when clicking on it
+document.getElementById("responsive_menu").addEventListener("click", function (event) 
+{
+    event.stopPropagation();
+});
 
 
 /*************************** Portfolio Slideshow part in the home page ***************************/
+
 const slider = document.querySelector(".cards");
 const images = document.querySelectorAll(".cards img");
 let index = 0;
@@ -159,39 +91,3 @@ function currentSlide(index)
 
 showSlides();
 setInterval(nextSlide, 3000);
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     function initializeQuoteSlider() {
-//         let slideIndex = 0;
-//         const slides = document.querySelectorAll(".feedback-slide");
-//         const dots = document.querySelectorAll(".dot");
-    
-//         function showSlides() {
-//             slides.forEach((slide, i) => {
-//                 slide.classList.toggle("active", i === slideIndex);
-//                 dots[i].classList.toggle("active", i === slideIndex);
-//             });
-//         }
-    
-//         function nextSlide() {
-//             slideIndex = (slideIndex + 1) % slides.length;
-//             showSlides();
-//         }
-    
-//         function currentSlide(index) {
-//             slideIndex = index;
-//             showSlides();
-//         }
-    
-//         dots.forEach((dot, index) => {
-//             dot.addEventListener("click", () => currentSlide(index));
-//         });
-    
-//         showSlides();
-//         setInterval(nextSlide, 3000);
-//     }
-    
-//     // Call the function when the page loads
-//     initializeQuoteSlider();
-//     ;
-// });
