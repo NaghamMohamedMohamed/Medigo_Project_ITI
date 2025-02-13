@@ -1,5 +1,4 @@
 /*************************** For responsive icon navigation menu and it's navigation menus for smaller screens ***************************/
-
 function toggleMenu() 
 {
     var menu = document.getElementById("responsive_menu");
@@ -53,7 +52,9 @@ function filterSelection(event, category) {
     document.querySelectorAll('.filter').forEach(filter => filter.classList.remove('active'));
     event.target.classList.add('active');
   }
-  function openFullscreen(element) {
+
+/*************************** For portfolio projects cards expansion ( full screen ) ***************************/
+function openFullscreen(element) {
     var modal = document.getElementById("fullscreenModal");
     var fullscreenImg = document.getElementById("fullscreenImage");
     var fullscreenText = document.getElementById("fullscreenText");
