@@ -5,223 +5,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Medigo</title>
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Navbar */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo {
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-        }
-
-        .nav-links li {
-            margin: 0 15px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-        }
-
-        .contact-btn {
-            background: lightblue;
-            padding: 8px 12px;
-            border-radius: 5px;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: url('contact.jpg') center/cover no-repeat;
-            color: rgb(255, 255, 255);
-            padding: 80px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .hero h1 {
-            font-size: 40px;
-            font-weight: bold;
-        }
-
-        .sidehero {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 8px 15px;
-            border-radius: 5px;
-        }
-
-        /* Main Layout */
-        .container {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 20px;
-            padding: 40px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        /* Contact Info */
-        .contact-info {
-            background: #f9f9f9;
-            padding: 20px;
-
-        }
-
-        .contact-info h2 {
-            font-size: 24px;
-        }
-
-        .map-placeholder {
-            background: #ddd;
-            height: 300px;
-            text-align: center;
-            line-height: 200px;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-
-        /* Recent Posts */
-        .recent-posts {
-            padding: 20px;
-        }
-
-
-        .recent-posts h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-        }
-
-        .post {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            padding: 15px 0;
-            /* Adds space above and below each post */
-            border-bottom: 1px solid #ddd;
-        }
-
-        .post img {
-            width: 60px;
-            height: 60px;
-            margin-right: 10px;
-        }
-
-        /* Styling for the date */
-        #datePost {
-            color: grey;
-            /* Sets the date text color to grey */
-            font-size: 14px;
-        }
-
-        /* Styling for the post title */
-        #pPost {
-            color: black;
-            /* Default color */
-            text-decoration: none;
-            /* Remove underline */
-            cursor: pointer;
-            /* Make it look clickable */
-        }
-
-        /* Change color to blue on hover */
-        #pPost:hover {
-            color: blue;
-        }
-
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-
-            .nav-links {
-                display: none;
-            }
-        }
-
-        /* Categories */
-        .categories ul {
-            list-style: none;
-            padding: 20px;
-            display: grid;
-            grid-template-rows: repeat(4, auto);
-            /* 4 rows */
-            grid-auto-flow: column;
-            /* Items fill columns first */
-            gap: 10px 20px;
-            /* Spacing between items */
-        }
-
-        .categories ul li {
-            width: 70%;
-            margin-bottom: 5px;
-
-        }
-
-        .categories ul li a {
-            text-decoration: none;
-            color: rgb(36, 145, 228);
-        }
-
-
-        /* Flickr Feed */
-        .flickr-images {
-            display: flex;
-            padding: 40px;
-            gap: 10px;
-        }
-
-
-        /* Text Widget */
-        .text-widget p {
-            font-size: 14px;
-            padding: 20px;
-            color: #555;
-        }
-
-        #map {
-            height: 100%;
-            width: 100%;
-            border-radius: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">🟦 MEDIGO</div>
-        <ul class="nav-links">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">PORTFOLIO</a></li>
-            <li><a href="#">BLOG</a></li>
-            <li><a href="#">ARCHIVES</a></li>
-            <li><a href="#" class="contact-btn">CONTACT</a></li>
-        </ul>
-    </nav>
+    	<!-------------------------------- Responsive Menu Before Header -------------------------------->
+        <div class="menu-toggle-btn" onclick="toggleMenu()">&#9776;</div>
+        <section id="responsive_menu">
+            <ul>
+                <li><a href="../Home Page/home_page.html">Home</a></li>
+                <li><a href="#">Portfolio</a>
+                    <ul>
+                        <li><a href="../Portfolio-Grid.html">- Portfolio Grid</a></li>
+                        <li><a href="../Portfolio-projectImage.html">- Project Image</a></li>
+                        <li><a href="#">- Project Slideshow</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Blog</a>
+                    <ul>
+                        <li><a href="#">- Blog Standard</a></li>
+                        <li><a href="#">- Blog Single</a></li>
+                        <li><a href="#">- Visit Templatemo</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Archives</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+            </ul>
+        </section>
+    
+        <!-------------------------------- Header Bar -------------------------------->
+        <header class="site-header">
+            <div>
+                <div >
+                    <div class="logo">
+                        <a href="../Home Page/home_page.html">
+                            <img src="../images/logo.png" alt="Medigo by templatemo">
+                        </a>
+                    </div>	
+    
+                    <div class="main-navigation">
+                        <nav class="main-nav">
+                            <ul>
+                                <li ><a href="../Home Page/home_page.html">Home</a></li>
+                                <li class="dropdown"><a href="#">Portfolio</a>
+                                    <ul>
+                                        <li><a href="../Portfolio-Grid.html">Portfolio Grid</a></li>
+                                        <li><a href="../Home Page/home_page.html">Project Image</a></li>
+                                        <li><a href="#">Project Slideshow</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Blog</a>
+                                    <ul>
+                                        <li><a href="#">Blog Standard</a></li>
+                                        <li><a href="#">Blog Single</a></li>
+                                        <li><a href="#">Visit Templatemo</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Archives</a></li>
+                                <li class="active"><a href="../contact/contact.html">Contact</a></li>
+                            </ul>
+                        </nav> 
+                    </div> 
+                </div> 
+            </div> 
+        </header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -233,13 +82,37 @@
     <div class="container">
         <!-- Contact Info -->
         <section class="contact-info">
-            <h2>Get In Touch With Us</h2>
-            <p>Nihil, aperiam, ad molestiae ut enim reprehenderit rem repudiandae ducimus dolorem obcaecati rerum
-                accusamus provident atque eos cum.</p>
+            <h2>Get In Touch With Us</h2><br>
+            <p>Nihil, aperiam, ad molestiae ut enim reprehenderit rem repudiandae ducimus dolorum 
+                obcaecati rerum accusamus provident atque eos cum. Reiciendis, modi, sint, vel, 
+                eligendi veniam esse qui quasi voluptas recusandae eum accusamus error animi expedita amet rem ad quos.</p><br>
 
             <!-- Google Maps Placeholder -->
             <div class="map-placeholder">
                 <div id="map"></div>
+            </div><br><br><br>
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Send a Direct Message</h2>
+                <form>
+                    <div class="input-group">
+                        <label>Your Name:</label>
+                        <input type="text" >
+                    </div>
+                    <div class="input-group">
+                        <label>Email Address:</label>
+                        <input type="email">
+                    </div>
+                    <div class="input-group">
+                        <label>Subject:</label>
+                        <input type="text" >
+                    </div>
+                    <div class="input-group">
+                        <label>Your Message:</label>
+                        <textarea ></textarea>
+                    </div>
+                    <button type="submit" class="send-btn">Send Message</button>
+                </form>
             </div>
         </section>
 
@@ -293,10 +166,29 @@
             <!-- Text Widget -->
             <div class="text-widget">
                 <h3>Text Widget</h3>
-                <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cum sociis natoque penatibus et magnis dis parturient…</p>
             </div>
         </aside>
     </div>
+
+
+    <footer class="site-footer">
+		<div class="col-md-12">
+			<nav class="footer-nav">
+				<ul class="footer-menu">
+					<li><a href="home_page.html">HOME</a></li>
+					<li><a href="portfolio.html">PORTFOLIO</a></li>
+					<li><a href="#">BLOG POSTS</a></li>
+					<li><a href="#">SHORTCODES</a></li>
+					<li><a href="../contact/contact.html">CONTACT</a></li>
+				</ul> 
+			</nav> 
+		</div> 
+		<div class="col-md-12">
+			<p class="copyright-text">Copyright &copy; 2084 Company Name</p>
+		</div> 
+	</footer> 
+
     <script>
         function initMap() {
             const location = { lat: 30.0507776, lng: 31.0406657 };
@@ -312,7 +204,49 @@
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap"
-        async defer></script
+        async defer></script>
+        <script>
+            /*************************** For responsive icon navigation menu and it's navigation menus for smaller screens ***************************/
+
+function toggleMenu() 
+{
+    var menu = document.getElementById("responsive_menu");
+
+    // Toggle menu visibility
+    if (menu.style.display === "block") 
+    {
+        menu.style.display = "none";
+    } 
+    else 
+    {
+        menu.style.display = "block";
+    }
+}
+
+// Hide menu when mouse leaves it
+document.getElementById("responsive_menu").addEventListener("mouseleave", function () {
+    this.style.display = "none";
+});
+
+// Hide menu when clicking outside
+document.addEventListener("click", function (event) {
+    var menu = document.getElementById("responsive_menu");
+    var toggleBtn = document.querySelector(".menu-toggle-btn");
+
+    // Close the menu only if clicking outside of it and the toggle button
+    if (!menu.contains(event.target) && !toggleBtn.contains(event.target))     
+    {
+        menu.style.display = "none";
+    }
+});
+
+// Prevent the menu from closing when clicking on it
+document.getElementById("responsive_menu").addEventListener("click", function (event) 
+{
+    event.stopPropagation();
+});
+        </script>
+        
 
 </body>
 </html>
