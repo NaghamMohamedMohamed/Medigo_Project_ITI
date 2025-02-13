@@ -1,0 +1,652 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  body {
+    background: white;
+    font-size: 16px;
+    font-family: "PT Serif", Georgia, serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 28px;
+    color: #777777;
+  }
+  
+  h2 {
+    font-family: "Raleway", sans-serif;
+    color: black;
+  }
+  
+  a {
+    /* Remove the underline of the links */
+    text-decoration: none;
+  }
+  /************************************* Responsive Menu Before Header ( For Smaller Screens ) *************************************/
+  .responsive_menu {
+    padding: 20px;
+    background-color: rgba(49, 55, 58, 0.98);
+    display: none;
+    position: relative;
+    z-index: 9999;
+  }
+  
+  .main-nav ul,
+  .main_menu,
+  .main_menu li ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .main_menu li {
+    border-bottom: 1px solid #485156;
+    padding: 10px 0;
+  }
+  
+  .main_menu li:first-child {
+    padding-top: 0;
+  }
+  
+  .main_menu li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .main_menu li a {
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    color: #bfbfbf;
+    font-weight: 500;
+  }
+  
+  .main_menu li ul li {
+    margin-left: 20px;
+  }
+  
+  .main_menu li ul li:first-child {
+    border-top: 1px solid #485156;
+    padding-top: 8px;
+    margin-top: 10px;
+  }
+  
+  .main_menu li ul li:before {
+    content: "-";
+    color: gray;
+    margin-right: 10px;
+  }
+  
+  /************************************* Header Bar *************************************/
+  /* Header Styling */
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3%;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px;
+    z-index: 9999;
+    padding: 40px 0;
+    transition: padding 0.3s ease-in-out;
+    justify-content: center;
+  }
+  
+  /* Flexbox for Alignment */
+  .site-header .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Prevent wrapping */
+    flex-wrap: nowrap;
+  }
+  
+  /* Logo Styling */
+  .logo {
+    margin-left: 20%;
+    display: flex;
+    align-items: center;
+    /* Space between logo and menu */
+    margin-right: 300px;
+  }
+  
+  .logo img {
+    max-height: 40px; /* Adjust if needed */
+    width: auto;
+  }
+  
+  /* Navigation Styling */
+  .main-navigation {
+    display: flex;
+    flex-grow: 1;
+    /* Align closer to the logo */
+    justify-content: flex-start;
+  }
+  
+  .main-nav ul {
+    display: flex;
+    /* Ensures vertical alignment */
+    align-items: center;
+  }
+  
+  .main-nav ul li {
+    position: relative;
+    margin-left: 30px;
+  }
+  
+  /* Dropdown Menu */
+  .main-nav ul li ul {
+    position: absolute;
+    display: none;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    margin-top: 5px;
+    width: 220px;
+    border: 2px solid #f1f4f5;
+  }
+  
+  .main-nav ul li ul li {
+    width: 100%;
+    border-bottom: 1px solid #dce4e6;
+  }
+  
+  .main-nav ul li ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .main-nav ul li:hover > ul {
+    display: block;
+  }
+  
+  /* Menu Links */
+  .main-nav ul li a {
+    color: #31373a;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    padding: 5px 10px;
+    display: block;
+    border-radius: 3px;
+  }
+  
+  .main-nav ul li a:hover,
+  .main-nav ul li ul li a:hover,
+  .main-nav ul li.active a,
+  .service-icon-wrap i,
+  .service-content-wrap a {
+    color: #00a8d6;
+  }
+  
+  .main-nav ul li.active a {
+    background-color: #f1f4f5;
+  }
+  
+  /* Style Dropdown Indicator */
+  .main-nav li.dropdown > a {
+    position: relative;
+    /* Add space for arrow */
+    padding-right: 17px;
+  }
+  
+  /* Add Down Arrow */
+  .main-nav li.dropdown > a::after {
+    /* Unicode down arrow */
+    content: "▼";
+    font-size: 12px;
+    /* Match text color */
+    color: #31373a;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+  }
+  
+  .main-nav ul li ul li a {
+    background-color: transparent;
+    color: #777777;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+  
+  /* Adjust for Shrinking Header */
+  .site-header.site-header-shrink {
+    padding: 15px 0;
+  }
+  
+  /*-------------------------------- Hero Section --------------------------------*/
+  
+  /* Hero Section */
+  .hero {
+    background: url("../images/portfolioId.jpg") fixed no-repeat top/cover;
+    background-position: center -100px; /* Moves the image 20px down */
+    height: 300px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 40px;
+    position: relative;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .hero h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 30px;
+  }
+  .sidehero {
+    position: relative;
+    z-index: 1;
+    text-align: right;
+    margin-top: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 8px 8px;
+    border-radius: 1px;
+  }
+/*-------------------------------- Project Container --------------------------------*/
+.project-container {
+    display: grid !important;
+    grid-template-columns: 65% 35% !important; /* Adjust width for slideshow (left) and details (right) */
+    align-items: start;
+    max-width: 1200px; /* Prevents content from being too wide */
+    width: 100%;
+    justify-content: space-between;
+    margin: 40px auto;
+    gap: 40px; /* Adds spacing between slideshow and text */
+    /* border: 1px solid red; */
+}
+
+* { 
+    box-sizing: border-box;
+}
+
+/*-------------------------------- Slideshow --------------------------------*/
+.slideshow-container {
+    /* grid-template-columns: 65% !important; Adjust width for slideshow (left) and details (right) */
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    border-radius: 8px;
+    aspect-ratio: 16/9; /* Maintain a responsive aspect ratio */
+    grid-column: 1; /* Places this element in the second column */
+    grid-row: 1;
+
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Hover effect for buttons */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc.) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+/*-------------------------------- Project Details --------------------------------*/
+.project-details {
+    text-align: left;
+    max-width: 100%;
+    grid-column: 2; /* Places this element in the second column */
+    grid-row: 1;
+    align-self: start; /* Ensures it stays at the top of the grid */
+
+
+    /* align-items: flex-end; */
+    /* grid-template-columns:35% !important; Adjust width for slideshow (left) and details (right) */
+
+}
+
+.project-details h2 {
+    margin-top: 10px;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.project-details p {
+    margin-top: 10px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.project-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-details ul li {
+    margin-bottom: 10px;
+}
+
+/*-------------------------------- Responsive Design --------------------------------*/
+@media (max-width: 900px) { 
+    .project-container {
+        grid-template-columns: 1fr; /* Stack elements vertically */
+        text-align: center; /* Center text */
+    }
+    .project-details {
+        max-width: 100%; /* Ensure full width */
+    }
+}
+
+  /*-------------------------------- Contact Section --------------------------------*/
+
+.contact-section {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 40px;
+    margin-top: 100px;
+    font-size: 1.2rem;
+  }
+  .contact-section a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .related-projects {
+    margin-top: 40px;
+  }
+  /*-------------------------------- Cards --------------------------------*/
+  
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  @media (max-width: 768px) {
+    .cards-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  .card {
+    /* Ensures overlay is relative to each card */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image-wrapper {
+    /* Ensures overlay is within the wrapper */
+    position: relative;
+    width: 380px;
+    height: 300px;
+    overflow: hidden;
+    /* bottom: 0; */
+    text-align: left;
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Overlay styles */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00a8d6; /* Semi-transparent overlay */
+    display: flex;
+    flex-direction: column;
+  
+    /* Align content to left */
+    /* align-items: flex-start;  */
+    /* Align content to bottom */
+    justify-content: flex-end;
+  
+    /* align-items: center; */
+    /* justify-content: center; */
+    color: white;
+    transform: scale(0); /* Initially hidden */
+    transition: transform 0.3s ease-in-out;
+  }
+  /* Expansion Icon */
+  .expand-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e7f7fb; /* Light grey rectangular background */
+    color: black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Fullscreen Image Modal */
+  .fullscreen-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none; /* Hidden initially */
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Fullscreen Image */
+  .fullscreen-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+  }
+  .fullscreen-text {
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  /* Hover effect */
+  .image-wrapper:hover .overlay {
+    /* Overlay appears on hover */
+    transform: scale(1);
+  }
+  
+  /* Styling for overlay text */
+  .overlay span,
+  .overlay h3 {
+    /* padding : top-right-bottom-left */
+    padding-left: 20px;
+    padding-bottom: 10px;
+  
+    /* margin-left: 20px; */
+    /* margin-top: 10px; */
+    margin: 0px;
+    font-size: 15px;
+    /* text-align: left; */
+  }
+  
+  .overlay h3 a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Style for Menu Button (☰) */
+  /* .menu-toggle-btn {
+      display: none; /* Initially hidden 
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background-color: #333;
+      color: white;
+      font-size: 24px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 10000; /* Ensure it's on top 
+  }
+  
+  /* Show menu button on small screens 
+  @media (max-width: 1010px) {
+      .menu-toggle-btn {
+          display: block !important;
+      }
+  
+      .site-header {
+          display: none !important;
+      }
+  
+      /* Responsive menu positioning 
+      .responsive_menu {
+          display: none;
+          position: fixed;
+          top: 60px;
+          right: 15px;
+          background: white;
+          border-radius: 5px;
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+          padding: 10px;
+          z-index: 9999;
+      }
+  } */
+  /************************************* Footer *************************************/
+  .site-footer {
+    background-color: #f1f4f5;
+    padding: 100px 0;
+    color: #aaaaaa;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  .footer-menu,
+  .copyright-text {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .copyright-text {
+    margin-top: 40px;
+  }
+  
+  /* Make the menu items inline */
+  .footer-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    /* Spacing between menu items */
+    gap: 20px;
+  }
+  
+  /* Styling for menu items */
+  .footer-menu li {
+    display: inline-block;
+  }
+  
+  /* Styling for menu links */
+  .footer-menu li a {
+    color: grey;
+    padding: 5px 20px;
+    transition: color 0.3s ease;
+  }
+  
