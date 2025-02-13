@@ -1,507 +1,509 @@
      /* General Reset */
      * {
-         margin: 0;
-         padding: 0;
-         box-sizing: border-box;
-         font-family: Arial, sans-serif;
-     }
-
-     html,
-     body {
-         overflow-x: hidden;
-         width: 100%;
-     }
-
-
-     /* Navbar */
-
-
-     /************************************* Responsive Menu Before Header ( For Smaller Screens ) *************************************/
-     .menu-toggle-btn {
-         display: none;
-         font-size: 24px;
-         cursor: pointer;
-         position: absolute;
-         top: 15px;
-         right: 20px;
-         z-index: 10000;
-     }
-
-     #responsive_menu {
-         display: none;
-         background: rgba(49, 55, 58, 0.98);
-         position: absolute;
-         top: 100px;
-         right: 0;
-         width: 100%;
-         /* text-align: center; */
-         text-align: left;
-         z-index: 9999;
-         padding: 10px 0;
-     }
-
-     #responsive_menu ul {
-         list-style: none;
-         padding: 0;
-         margin: 0;
-     }
-
-     #responsive_menu ul li {
-         padding: 10px 0;
-     }
-
-     #responsive_menu ul li ul {
-         margin-left: 40px;
-     }
-
-     #responsive_menu ul li a {
-         color: #bfbfbf;
-         font-size: 15px;
-         text-decoration: none;
-         margin-left: 20px;
-     }
-
-     @media (max-width: 1000px) {
-         .main-navigation {
-             display: none;
-         }
-
-         .menu-toggle-btn {
-             display: block;
-         }
-     }
-
-     #responsive_menu.active {
-         display: block;
-     }
-
-
-     /************************************* Header Bar *************************************/
-     .site-header {
-         position: fixed;
-         top: 0;
-         left: 0;
-         width: 100%;
-         background: white;
-         box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.35);
-         padding: 20px 0;
-         z-index: 9999;
-         text-align: center;
-         height: 3%;
-         padding: 40px 0;
-         transition: padding 0.3s ease-in-out;
-         justify-content: center;
-     }
-
-     /* Flexbox for Alignment */
-     .site-header .row {
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         /* Prevent wrapping */
-         flex-wrap: nowrap;
-     }
-
-     /* Logo Styling */
-     .logo {
-         margin-left: 7%;
-         display: flex;
-         align-items: center;
-         /* Space between logo and menu */
-         margin-right: 300px;
-     }
-
-     .logo img {
-         max-height: 40px;
-         width: auto;
-     }
-
-     .main-nav ul {
-         list-style: none;
-         padding: 0;
-         margin: 0;
-         display: flex;
-         justify-content: center;
-         margin-top: -30px;
-         margin-right: -700px;
-     }
-
-
-     /* Add Down Arrow */
-     .main-nav li.dropdown>a::after {
-         /* Unicode down arrow */
-         content: "▼";
-         font-size: 12px;
-         /* Match text color */
-         color: #31373a;
-         position: absolute;
-         right: 0;
-         top: 50%;
-         transform: translateY(-50%);
-         transition: transform 0.3s ease;
-     }
-
-     /* Style Dropdown Indicator */
-     .main-nav li.dropdown>a {
-         position: relative;
-         /* Add space for arrow */
-         padding-right: 17px;
-     }
-
-     /* Add Down Arrow */
-     .main-nav li.dropdown>a::after {
-         /* Unicode down arrow */
-         content: "▼";
-         font-size: 12px;
-         /* Match text color */
-         color: #31373a;
-         position: absolute;
-         right: 0;
-         top: 50%;
-         transform: translateY(-50%);
-         transition: transform 0.3s ease;
-     }
-
-     .main-nav ul li {
-         margin: 0 15px;
-         position: relative;
-     }
-
-     .main-nav ul li a:hover,
-     .main-nav ul li ul li a:hover,
-     .main-nav ul li.active a,
-     .service-icon-wrap i,
-     .service-content-wrap a {
-         color: #00a8d6;
-     }
-
-     .main-nav ul li.active a {
-         background-color: #f1f4f5;
-     }
-
-     .main-nav ul li a {
-         text-decoration: none;
-         color: #31373a;
-         font-weight: 700;
-         font-size: 13px;
-         text-transform: uppercase;
-         padding: 10px;
-         display: block;
-         font-family: "Raleway", sans-serif;
-     }
-
-     /* Dropdown Menu */
-     .main-nav ul li ul {
-         position: absolute;
-         display: none;
-         background-color: white;
-         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-         z-index: 999;
-         margin-top: 1px;
-         width: 220px;
-         border: 2px solid #f1f4f5;
-     }
-
-     .main-nav ul li:hover ul {
-         display: block;
-     }
-
-     .main-nav ul li ul li a {
-         background-color: transparent;
-         color: #777777;
-         text-transform: capitalize;
-         font-weight: 600;
-     }
-
-     /* Hero Section */
-     .hero {
-         margin-top: 70px;
-         background: url('../images/contact.jpg') center/cover no-repeat;
-         color: rgb(255, 255, 255);
-         padding: 80px 40px;
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-
-     }
-
-     .hero h1 {
-         font-size: 40px;
-         font-weight: bold;
-         margin-left: 110px;
-     }
-
-     .sidehero {
-         background: rgba(0, 0, 0, 0.6);
-         padding: 8px 15px;
-         border-radius: 5px;
-         margin-right: 110px;
-     }
-
-     /* Main Layout */
-     .container {
-         display: grid;
-         grid-template-columns: 2fr 1fr;
-         gap: 20px;
-         padding: 40px;
-         max-width: 1200px;
-         margin: auto;
-     }
-
-     /* Contact Info */
-     .contact-info {
-         padding: 20px;
-
-     }
-
-     .contact-info h2 {
-         font-size: 24px;
-     }
-
-     .contact-info p {
-         color: #aaaaaa;
-     }
-
-     .map-placeholder {
-         background: #ddd;
-         height: 300px;
-         text-align: center;
-         line-height: 200px;
-         margin-top: 20px;
-         border-radius: 10px;
-     }
-
-     #map {
-         height: 100%;
-         width: 100%;
-     }
-
-     /* Contact Form */
-     .contact-form {
-         border-top: 1px solid #ddd;
-         max-width: 800px;
-         padding: 0;
-     }
-
-     /* Title */
-     .contact-form h2 {
-         font-size: 22px;
-         margin-bottom: 15px;
-         padding-top: 5%;
-         padding-bottom: 5%;
-     }
-
-     /* Grid Layout */
-     .contact-form form {
-
-
-         display: grid;
-         grid-template-columns: repeat(3, 1fr);
-         gap: 15px;
-         background: #ffffff;
-         padding: 20px;
-         margin: -15px;
-     }
-
-     /* Make textarea span all columns */
-     .input-group:nth-child(4) {
-         grid-column: span 3;
-     }
-
-     /* Labels */
-     .input-group label {
-         display: block;
-         font-weight: bold;
-         color: #ccc;
-         align-items: start;
-         margin-bottom: 5px;
-         font-size: 14px;
-     }
-
-     /* Inputs and Textarea */
-     .input-group input,
-     .input-group textarea {
-         width: 100%;
-         padding: 10px;
-         border: 1px solid #ccc;
-         border-radius: 5px;
-         background: #f2f5f7;
-     }
-
-     /* Textarea Size */
-     textarea {
-         height: 150px;
-     }
-
-     /* Send Button */
-     .send-btn {
-         /* grid-column: span 3; */
-         background: #009fe3;
-         color: white;
-         padding: 12px 20px;
-         border: none;
-         border-radius: 5px;
-         cursor: pointer;
-         width: 70%;
-         font-size: 16px;
-     }
-
-     .send-btn:hover {
-         background: #0073e6;
-     }
-
-
-     /* Recent Posts */
-     .recent-posts {
-         padding: 20px;
-     }
-
-
-     .recent-posts h3 {
-         font-size: 20px;
-         margin-bottom: 15px;
-     }
-
-     .post {
-         display: flex;
-         align-items: center;
-         margin-bottom: 15px;
-         padding: 15px 0;
-         border-bottom: 1px solid #ddd;
-     }
-
-     .post img {
-         width: 60px;
-         height: 60px;
-         margin-right: 10px;
-     }
-
-     /* Styling for the date */
-     #datePost {
-         color: grey;
-         font-size: 14px;
-     }
-
-     /* Styling for the post title */
-     #pPost {
-         color: black;
-         /* Default color */
-         text-decoration: none;
-         /* Remove underline */
-         cursor: pointer;
-         /* Make it look clickable */
-     }
-
-     /* Change color to blue on hover */
-     #pPost:hover {
-         color: blue;
-     }
-
-
-     /* Responsive Design */
-     @media (max-width: 768px) {
-         .container {
-             grid-template-columns: 1fr;
-         }
-
-         .nav-links {
-             display: none;
-         }
-     }
-
-     /* Categories */
-     .categories ul {
-         list-style: none;
-         padding: 20px;
-         display: grid;
-         grid-template-rows: repeat(4, auto);
-         /* 4 rows */
-         grid-auto-flow: column;
-         /* Items fill columns first */
-         gap: 10px 20px;
-         /* Spacing between items */
-         margin-left: -14px;
-     }
-
-     .categories ul li {
-         width: 70%;
-         margin-bottom: 5px;
-
-     }
-
-     .categories ul li a {
-         text-decoration: none;
-         color: rgb(36, 145, 228);
-     }
-
-
-     /* Flickr Feed */
-     .flickr-images {
-         display: flex;
-         padding: 40px;
-         gap: 10px;
-     }
-
-
-     /* Text Widget */
-     .text-widget p {
-         font-size: 14px;
-         padding: 20px;
-         color: #878787;
-         margin: -13px;
-
-     }
-
-     /* Footer*/
-     .site-footer {
-         background-color: #f1f4f5;
-         padding: 100px 0;
-         color: #aaaaaa;
-         font-family: "Raleway", sans-serif;
-     }
-
-     .footer-menu,
-     .copyright-text {
-         text-align: center;
-         padding: 0;
-         margin: 0;
-     }
-
-     .copyright-text {
-
-         margin-top: 20px;
-         /* Reduce margin */
-         font-size: 12px;
-         font-weight: bold;
-
-     }
-
-     /* Make the menu items inline */
-     .footer-menu {
-         list-style: none;
-         display: flex;
-         justify-content: center;
-         /* Spacing between menu items */
-         gap: 20px;
-     }
-
-     /* Styling for menu items */
-     .footer-menu li {
-         display: inline-block;
-
-     }
-
-     /* Styling for menu links */
-     .footer-menu li a {
-         color: grey;
-         padding: 5px 20px;
-         transition: color 0.3s ease;
-         text-decoration: none;
-         font-size: 14px;
-
-     }
-
-     .footer-menu li a :hover {
-         color: #009fe3;
-
-     }
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+
+    /* Navbar */
+
+
+    /************************************* Responsive Menu Before Header ( For Smaller Screens ) *************************************/
+    .menu-toggle-btn {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 10000;
+    }
+
+    #responsive_menu {
+        display: none;
+        background: rgba(49, 55, 58, 0.98);
+        position: absolute;
+        top: 100px;
+        right: 0;
+        width: 100%;
+        /* text-align: center; */
+        text-align: left;
+        z-index: 9999;
+        padding: 10px 0;
+    }
+
+    #responsive_menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #responsive_menu ul li {
+        padding: 10px 0;
+    }
+
+    #responsive_menu ul li ul {
+        margin-left: 40px;
+    }
+
+    #responsive_menu ul li a {
+        color: #bfbfbf;
+        font-size: 20px;
+        text-decoration: none;
+        margin-left: 20px;
+    }
+
+    @media (max-width: 1000px) {
+        .main-navigation {
+            display: none;
+        }
+
+        .menu-toggle-btn {
+            display: block;
+            position: fixed;
+        }
+    }
+
+    #responsive_menu.active {
+        display: block;
+    }
+
+
+    /************************************* Header Bar *************************************/
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.35);
+        padding: 20px 0;
+        z-index: 9999;
+        text-align: center;
+        height: 3%;
+        padding: 40px 0;
+        transition: padding 0.3s ease-in-out;
+        justify-content: center;
+    }
+
+    /* Flexbox for Alignment */
+    .site-header .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Prevent wrapping */
+        flex-wrap: nowrap;
+    }
+
+    /* Logo Styling */
+    .logo {
+        margin-left: 7%;
+        display: flex;
+        align-items: center;
+        /* Space between logo and menu */
+        margin-right: 300px;
+    }
+
+    .logo img {
+        max-height: 40px;
+        width: auto;
+    }
+
+    .main-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: -30px;
+        margin-right: -700px;
+    }
+
+
+    /* Add Down Arrow */
+    .main-nav li.dropdown>a::after {
+        /* Unicode down arrow */
+        content: "▼";
+        font-size: 12px;
+        /* Match text color */
+        color: #31373a;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease;
+    }
+
+    /* Style Dropdown Indicator */
+    .main-nav li.dropdown>a {
+        position: relative;
+        /* Add space for arrow */
+        padding-right: 17px;
+    }
+
+    /* Add Down Arrow */
+    .main-nav li.dropdown>a::after {
+        /* Unicode down arrow */
+        content: "▼";
+        font-size: 12px;
+        /* Match text color */
+        color: #31373a;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease;
+    }
+
+    .main-nav ul li {
+        margin: 0 15px;
+        position: relative;
+    }
+
+    .main-nav ul li a:hover,
+    .main-nav ul li ul li a:hover,
+    .main-nav ul li.active a,
+    .service-icon-wrap i,
+    .service-content-wrap a {
+        color: #00a8d6;
+    }
+
+    .main-nav ul li.active a {
+        background-color: #f1f4f5;
+    }
+
+    .main-nav ul li a {
+        text-decoration: none;
+        color: #31373a;
+        font-weight: 700;
+        font-size: 13px;
+        text-transform: uppercase;
+        padding: 10px;
+        display: block;
+        font-family: "Raleway", sans-serif;
+    }
+
+    /* Dropdown Menu */
+    .main-nav ul li ul {
+        position: absolute;
+        display: none;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        margin-top: 5px;
+        width: 220px;
+        border: 2px solid #f1f4f5;
+    }
+
+    .main-nav ul li:hover ul {
+        display: block;
+    }
+
+    .main-nav ul li ul li a {
+        background-color: transparent;
+        color: #777777;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+
+    /* Hero Section */
+    .hero {
+        margin-top: 70px;
+        background: url('../images/contact.jpg') center/cover no-repeat;
+        color: rgb(255, 255, 255);
+        padding: 80px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        font-weight: bold;
+        margin-left: 110px;
+    }
+
+    .sidehero {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 8px 15px;
+        border-radius: 5px;
+        margin-right: 110px;
+    }
+
+    /* Main Layout */
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+        padding: 40px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    /* Contact Info */
+    .contact-info {
+        padding: 20px;
+
+    }
+
+    .contact-info h2 {
+        font-size: 24px;
+    }
+
+    .contact-info p {
+        color: #aaaaaa;
+    }
+
+    .map-placeholder {
+        background: #ddd;
+        height: 300px;
+        text-align: center;
+        line-height: 200px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+
+    #map {
+        height: 100%;
+        width: 100%;
+    }
+
+    /* Contact Form */
+    .contact-form {
+        border-top: 1px solid #ddd;
+        max-width: 800px;
+        padding: 0;
+    }
+
+    /* Title */
+    .contact-form h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    /* Grid Layout */
+    .contact-form form {
+
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        background: #ffffff;
+        padding: 20px;
+        margin: -15px;
+    }
+
+    /* Make textarea span all columns */
+    .input-group:nth-child(4) {
+        grid-column: span 3;
+    }
+
+    /* Labels */
+    .input-group label {
+        display: block;
+        font-weight: bold;
+        color: #ccc;
+        align-items: start;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    /* Inputs and Textarea */
+    .input-group input,
+    .input-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background: #f2f5f7;
+    }
+
+    /* Textarea Size */
+    textarea {
+        height: 150px;
+    }
+
+    /* Send Button */
+    .send-btn {
+        /* grid-column: span 3; */
+        background: #009fe3;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 70%;
+        font-size: 16px;
+    }
+
+    .send-btn:hover {
+        background: #0073e6;
+    }
+
+
+    /* Recent Posts */
+    .recent-posts {
+        padding: 20px;
+    }
+
+
+    .recent-posts h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .post {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding: 15px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .post img {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+    }
+
+    /* Styling for the date */
+    #datePost {
+        color: grey;
+        font-size: 14px;
+    }
+
+    /* Styling for the post title */
+    #pPost {
+        color: black;
+        /* Default color */
+        text-decoration: none;
+        /* Remove underline */
+        cursor: pointer;
+        /* Make it look clickable */
+    }
+
+    /* Change color to blue on hover */
+    #pPost:hover {
+        color: blue;
+    }
+
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+
+        .nav-links {
+            display: none;
+        }
+    }
+
+    /* Categories */
+    .categories ul {
+        list-style: none;
+        padding: 20px;
+        display: grid;
+        grid-template-rows: repeat(4, auto);
+        /* 4 rows */
+        grid-auto-flow: column;
+        /* Items fill columns first */
+        gap: 10px 20px;
+        /* Spacing between items */
+        margin-left: -14px;
+    }
+
+    .categories ul li {
+        width: 70%;
+        margin-bottom: 5px;
+
+    }
+
+    .categories ul li a {
+        text-decoration: none;
+        color: rgb(36, 145, 228);
+    }
+
+
+    /* Flickr Feed */
+    .flickr-images {
+        display: flex;
+        padding: 40px;
+        gap: 10px;
+    }
+
+
+    /* Text Widget */
+    .text-widget p {
+        font-size: 14px;
+        padding: 20px;
+        color: #878787;
+        margin: -13px;
+
+    }
+
+    /* Footer*/
+    .site-footer {
+        background-color: #f1f4f5;
+        padding: 100px 0;
+        color: #aaaaaa;
+        font-family: "Raleway", sans-serif;
+    }
+
+    .footer-menu,
+    .copyright-text {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap;
+    }
+
+    .copyright-text {
+
+        margin-top: 20px;
+        /* Reduce margin */
+        font-size: 12px;
+        font-weight: bold;
+
+    }
+
+    /* Make the menu items inline */
+    .footer-menu {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        /* Spacing between menu items */
+        gap: 20px;
+    }
+
+    /* Styling for menu items */
+    .footer-menu li {
+        display: inline-block;
+
+    }
+
+    /* Styling for menu links */
+    .footer-menu li a {
+        color: grey;
+        padding: 5px 20px;
+        transition: color 0.3s ease;
+        text-decoration: none;
+        font-size: 14px;
+
+    }
+
+    .footer-menu li a :hover {
+        color: #009fe3;
+
+    }
