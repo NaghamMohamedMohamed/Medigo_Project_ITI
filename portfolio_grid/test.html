@@ -1,0 +1,108 @@
+.responsive_menu 
+{
+    padding: 20px;
+    background-color: rgba(49, 55, 58, 0.98);
+    display: none;
+    position: relative;
+    z-index: 9999;
+}
+
+.main-nav ul, .main_menu, .main_menu li ul 
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main_menu li 
+{
+    border-bottom: 1px solid #485156;
+    padding: 10px 0;
+  
+}
+
+.main_menu li:first-child 
+{
+    padding-top: 0;
+} 
+  
+.main_menu li:last-child 
+{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.main_menu li a 
+{
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    color: #bfbfbf;
+    font-weight: 500;
+}
+
+.main_menu li ul li 
+{
+    margin-left: 20px;
+}
+ 
+.main_menu li ul li:first-child 
+{
+    border-top: 1px solid #485156;
+    padding-top: 8px;
+    margin-top: 10px;
+}
+
+.main_menu li ul li:before 
+{
+    content: '-';
+    color: gray;
+    margin-right: 10px;
+}
+<!-------------------------------- Header Bar -------------------------------->
+<header class="site-header">
+    <div class="container">
+        <div class="row">
+            <!-- <div class="col-md-12"> -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo.png" alt="Medigo by templatemo">
+                    </a>
+                </div>	
+
+                <div class="main-navigation">
+                    <nav class="main-nav">
+                        <ul class="sf-menu">
+                            <li class="active"><a href="index.html">Home</a></li>
+
+                            <li class="dropdown">
+                                <a href="#">Portfolio</a>
+                                <ul>
+                                    <li><a href="portfolio.html">Portfolio Grid</a></li>
+                                    <li><a href="project-image.html">Project Image</a></li>
+                                    <li><a href="project-slideshow.html">Project Slideshow</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#">Blog</a>
+                                <ul>
+                                    <li><a href="#">Blog Standard</a></li>
+                                    <li><a href="#">Blog Single</a></li>
+                                    <li><a href="#">visit templatemo</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Archives</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul> 
+                    </nav> 
+                    <!------- This is the responsive menu for tablet and mobiles ------->
+                    <!-- <div class="responsive-navigation">
+                        <a href="#nogo" class="menu-toggle-btn">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div> -->
+                </div> 
+            <!-- </div> -->
+        </div> 
+    </div> 
+</header>
