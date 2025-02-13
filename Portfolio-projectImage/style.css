@@ -167,7 +167,7 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Raleway", sans-serif;
-  padding: 10px 15px;
+  padding: 5px 10px;
   display: block;
   border-radius: 3px;
 }
@@ -221,7 +221,8 @@ a {
 
 /* Hero Section */
 .hero {
-  background: url("../images/portfolioId.jpg") center/cover no-repeat;
+  background: url("../images/portfolioId.jpg") fixed no-repeat top/cover;
+  background-position: center -100px; /* Moves the image 20px down */
   height: 300px;
   color: white;
   display: flex;
@@ -433,6 +434,9 @@ a {
   font-size: 30px;
   color: white;
   cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 5px;
 }
 /* Hover effect */
 .image-wrapper:hover .overlay {

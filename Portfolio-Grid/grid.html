@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medigo-grid</title>
+    <link rel="stylesheet" href="grid.css"/>
+    <!-- For icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+</head>
+<body>
+        <!-------------------------------- Responsive Menu Before Header -------------------------------->
+
+        <div class="responsive_menu">
+            <ul class="main_menu">
+              <li><a href="home_page.html">Home</a></li>
+              <li>
+                <a href="#">Portfolio</a>
+                <ul>
+                  <li><a href="portfolio.html">Portfolio Grid</a></li>
+                  <li><a href="project-image.html">Project Image</a></li>
+                  <li><a href="project-slideshow.html">Project Slideshow</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+                <ul>
+                  <li><a href="#">Blog Standard</a></li>
+                  <li><a href="#">Blog Single</a></li>
+                  <li><a href="#">visit templatemo</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Archives</a></li>
+              <li><a href="../contact/contact.html">Contact</a></li>
+            </ul>
+          </div>
+      
+          <!-------------------------------- Header Bar -------------------------------->
+      
+          <header class="site-header">
+            <div class="container">
+              <div class="row">
+                <!-- <div class="col-md-12"> -->
+                <div class="logo">
+                  <a href="home_page.html">
+                    <img src="../images/logo.png" alt="Medigo by templatemo" />
+                  </a>
+                </div>
+      
+                <div class="main-navigation">
+                  <nav class="main-nav">
+                    <ul class="sf-menu">
+                      <li class="active"><a href="home_page.html">Home</a></li>
+      
+                      <li class="dropdown">
+                        <a href="#">Portfolio</a>
+                        <ul>
+                          <li><a href="portfolio.html">Portfolio Grid</a></li>
+                          <li><a href="project-image.html">Project Image</a></li>
+                          <li>
+                            <a href="project-slideshow.html">Project Slideshow</a>
+                          </li>
+                        </ul>
+                      </li>
+      
+                      <li class="dropdown">
+                        <a href="#">Blog</a>
+                        <ul>
+                          <li><a href="#">Blog Standard</a></li>
+                          <li><a href="#">Blog Single</a></li>
+                          <li><a href="#">visit templatemo</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Archives</a></li>
+                      <li><a href="../contact/.contact.html">Contact</a></li>
+                    </ul>
+                  </nav>
+                  <!------- This is the responsive menu for tablet and mobiles ------->
+                  <!-- <div class="responsive-navigation">
+                                  <a href="#nogo" class="menu-toggle-btn">
+                                      <i class="fa fa-bars"></i>
+                                  </a>
+                              </div> -->
+                </div>
+                <!-- </div> -->
+              </div>
+            </div>
+          </header>
+
+            <!-- section one  -->
+  <!-- <header class="header">Header</header> -->
+  <section class="hero">
+    <h1>Our Portfolio</h1>
+    <p class="sidehero">Home / Contact</p>
+  </section>
+
+    <!-- section two  -->
+    <div class="filter-container">
+        <ul id="filters">
+          <li class="filter active" onclick="filterSelection(event,'All')">All</li>
+          <li class="filter" onclick="filterSelection(event,'Branding')">Branding</li>
+          <li class="filter" onclick="filterSelection(event,'Illustration')">Illustration</li>
+          <li class="filter" onclick="filterSelection(event,'Business')">Business</li>
+          <li class="filter" onclick="filterSelection(event,'Identity')">Identity</li>
+        </ul>
+      </div>
+
+      <section class="card-container">
+        <div class="card col-3 col-md-5 col-sm-11 Illustration">
+          <div class="overlay">
+            <div class="expand-icon" onclick="openFullscreen(this)">
+                &#x2922;
+                <!-- Unicode for two-arrow expand icon -->
+              </div>
+            <div class="text_title">
+              <span class="text">Illustration</span><br>
+              <h3 class="title"><a href="#">Visual Admin</a></h3>
+            </div>
+          </div>
+          <img src="../images/project1.jpg" alt="Image 1" class="image" />
+        </div>
+    
+        <div class="card col-3 col-md-5 col-sm-11 Branding">
+          <div class="overlay">
+            <div class="expand-icon" onclick="openFullscreen(this)">
+                &#x2922;
+                <!-- Unicode for two-arrow expand icon -->
+              </div>
+            <div class="text_title">
+              <span class="text">Branding</span>
+              <h3 class="title"><a href="#">Compass Template</a></h3>
+            </div>
+          </div>
+          <img src="../images/project2.jpg" alt="Image 2" class="image" />
+        </div>
+    
+        <div class="card col-3 col-md-5 col-sm-11 Illustration">
+          <div class="overlay">
+            <div class="expand-icon" onclick="openFullscreen(this)">
+                &#x2922;
+                <!-- Unicode for two-arrow expand icon -->
+              </div>
+            <div class="text_title">
+              <span class="text">Illustration</span>
+              <h3 class="title"><a href="#">Awesome Theme</a></h3>
+            </div>
+          </div>
+          <img src="../images/project3.jpg" alt="Image 3" class="image" />
+        </div>
+      
+        <div class="card col-3 col-md-5 col-sm-11 Illustration">
+          <div class="overlay">
+            <div class="expand-icon" onclick="openFullscreen(this)">
+                &#x2922;
+                <!-- Unicode for two-arrow expand icon -->
+              </div>
+            <div class="text_title">
+              <span class="text">Illustration</span>
+              <h3 class="title"><a href="#">Volton Personal Site</a></h3>
+            </div>
+          </div>
+          <img src="../images/project4.jpg" alt="Image 4" class="image" />
+        </div>
+        
+        <div class="card col-3 col-md-5 col-sm-11 Business">
+          <div class="overlay">
+            <div class="expand-icon" onclick="openFullscreen(this)">
+                &#x2922;
+                <!-- Unicode for two-arrow expand icon -->
+              </div>
+            <div class="text_title">
+              <span class="text">Business</span>
+              <h3 class="title"><a href="#">Rectangle Design</a></h3>
+            </div>
+          </div>
+          <img src="../images/project5.jpg" alt="Image 5" class="image" />
+        </div>
+    
+        <div class="card col-3 col-md-5 col-sm-11 Branding">
+          <div class="overlay">
+            <div class="expand-icon" onclick="openFullscreen(this)">
+                &#x2922;
+                <!-- Unicode for two-arrow expand icon -->
+              </div>
+            <div class="text_title">
+              <span class="text">Branding</span>
+              <h3 class="title"><a href="#">Masonry Gallery</a></h3>
+            </div>
+          </div>
+          <img src="../images/project6.jpg" alt="Image 6" class="image" />
+        </div>
+    
+        <div class="card col-3 col-md-5 col-sm-11 Branding Identity">
+          <div class="overlay">
+            <div class="expand-icon" onclick="openFullscreen(this)">
+                &#x2922;
+                <!-- Unicode for two-arrow expand icon -->
+              </div>
+            <div class="text_title">
+              <span class="text">Branding / Identity</span>
+              <h3 class="title"><a href="#">Gloss Template</a></h3>
+            </div>
+          </div>
+          <img src="../images/project7.jpg" alt="Image 7" class="image" />
+        </div>
+    
+        <div class="card col-3 col-md-5 col-sm-11 Illustration Identity">
+          <div class="overlay">
+            <div class="expand-icon" onclick="openFullscreen(this)">
+                &#x2922;
+                <!-- Unicode for two-arrow expand icon -->
+              </div>
+            <div class="text_title">
+              <span class="text">Illustration / Identity</span>
+              <h3 class="title"><a href="#">Ion Template</a></h3>
+            </div>
+          </div>
+          <img src="../images/project8.jpg" alt="Image 8" class="image" />
+        </div>
+    
+        <div class="card col-3 col-md-5 col-sm-11 Branding">
+          <div class="overlay">
+            <div class="expand-icon" onclick="openFullscreen(this)">
+                &#x2922;
+                <!-- Unicode for two-arrow expand icon -->
+              </div>
+            <div class="text_title">
+              <span class="text">Branding</span>
+              <h3 class="title"><a href="#">Freshness</a></h3>
+            </div>
+          </div>
+          <img src="../images/project9.jpg" alt="Image 9" class="image" />
+        </div>
+        <!-- Fullscreen Image Modal -->
+ <div class="fullscreen-modal" id="fullscreenModal">
+    <span class="close-btn" onclick="closeFullscreen()">&times;</span>
+    <img src="" class="fullscreen-image" id="fullscreenImage" />
+    <h3 class="fullscreen-text" id="fullscreenText"></h3>
+    <!-- Text Below Image -->
+</div>     
+</div>
+</section>
+<div class="pagination">
+    <a href=# class="page-btn">1</a>
+    <a href=# class="page-btn">2</a>
+    <a href=# class="page-btn">3</a>
+    <a href=# class="page-btn">...</a>
+    <a href= # class="page-btn">13</a>
+</div>
+
+    <!-------------------------------- Footer -------------------------------->
+
+    <footer class="site-footer">
+        <div class="col-md-12">
+          <nav class="footer-nav">
+            <ul class="footer-menu">
+              <li><a href="home_page.html">Home</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="#">Blog Posts</a></li>
+              <li><a href="#">Shortcodes</a></li>
+              <li><a href="../contact/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-12">
+          <p class="copyright-text">
+            Copyright &copy; 2084 Company Name | Design: templatemo
+          </p>
+        </div>
+      </footer>
+      <script src="script.js"></script>
+    </body>
+  </html>
+  
+    <script src="script.js"></script>
+</body>
+</html>
