@@ -6,88 +6,73 @@
     <title>Medigo</title>
 
     <!-------------------------------- Stylesheets -------------------------------->
-    <link rel="stylesheet" href="home_page_style.css">
+    <link rel="stylesheet" href="../Home Page/home_page_style.css">
 	<!-- For icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
 <body>
     
-    <!-------------------------------- Responsive Menu Before Header -------------------------------->
-
-    <div class="responsive_menu">
-        <ul class="main_menu">
-            <li><a href="home_page.html">Home</a></li>
+	<!-------------------------------- Responsive Menu Before Header -------------------------------->
+    <div class="menu-toggle-btn" onclick="toggleMenu()">&#9776;</div>
+    <section id="responsive_menu">
+        <ul>
+            <li><a href="../Home Page/home_page.html">Home</a></li>
             <li><a href="#">Portfolio</a>
-            	<ul>
-            		<li><a href="portfolio.html">Portfolio Grid</a></li>
-            		<li><a href="project-image.html">Project Image</a></li>
-            		<li><a href="project-slideshow.html">Project Slideshow</a></li>
-            	</ul>
+                <ul>
+                    <li><a href="../Portfolio-Grid.html">- Portfolio Grid</a></li>
+                    <li><a href="../Portfolio-projectImage.html">- Project Image</a></li>
+                    <li><a href="#">- Project Slideshow</a></li>
+                </ul>
             </li>
             <li><a href="#">Blog</a>
-				<ul>
-					<li><a href="#">Blog Standard</a></li>
-					<li><a href="#">Blog Single</a></li>
-                    <li><a href="#">visit templatemo</a></li>
-				</ul>
+                <ul>
+                    <li><a href="#">- Blog Standard</a></li>
+                    <li><a href="#">- Blog Single</a></li>
+                    <li><a href="#">- Visit Templatemo</a></li>
+                </ul>
             </li>
             <li><a href="#">Archives</a></li>
             <li><a href="../contact/contact.html">Contact</a></li>
-        </ul> 
-    </div> 
+        </ul>
+    </section>
 
-
-    <!-------------------------------- Header Bar -------------------------------->
-
+	<!-------------------------------- Header Bar -------------------------------->
     <header class="site-header">
-		<div class="container">
+        <div class="container">
 			<div class="row">
-				<!-- <div class="col-md-12"> -->
-					<div class="logo">
-						<a href="home_page.html">
-							<img src="../images/logo.png" alt="Medigo by templatemo">
-						</a>
-					</div>	
+				<div class="logo">
+					<a href="../Home Page/home_page.html">
+						<img src="../images/logo.png" alt="Medigo by templatemo">
+					</a>
+				</div>	
 
-					<div class="main-navigation">
-						<nav class="main-nav">
-							<ul class="sf-menu">
-								<li class="active"><a href="home_page.html">Home</a></li>
-
-					            <li class="dropdown">
-									<a href="#">Portfolio</a>
-					            	<ul>
-					            		<li><a href="portfolio.html">Portfolio Grid</a></li>
-					            		<li><a href="project-image.html">Project Image</a></li>
-					            		<li><a href="project-slideshow.html">Project Slideshow</a></li>
-					            	</ul>
-					            </li>
-
-					            <li class="dropdown">
-									<a href="#">Blog</a>
-									<ul>
-										<li><a href="#">Blog Standard</a></li>
-										<li><a href="#">Blog Single</a></li>
-                                        <li><a href="#">visit templatemo</a></li>
-									</ul>
-					            </li>
-					            <li><a href="#">Archives</a></li>
-					            <li><a href="../contact/.contact.html">Contact</a></li>
-							</ul> 
-						</nav> 
-						<!------- This is the responsive menu for tablet and mobiles ------->
-					    <!-- <div class="responsive-navigation">
-					        <a href="#nogo" class="menu-toggle-btn">
-					            <i class="fa fa-bars"></i>
-					        </a>
-					    </div> -->
-					</div> 
-				<!-- </div> -->
+				<div class="main-navigation">
+					<nav class="main-nav">
+						<ul>
+							<li class="active"><a href="../Home Page/home_page.html">Home</a></li>
+							<li class="dropdown"><a href="#">Portfolio</a>
+								<ul>
+									<li><a href="../Portfolio-Grid.html">Portfolio Grid</a></li>
+									<li><a href="../Home Page/home_page.html">Project Image</a></li>
+									<li><a href="#">Project Slideshow</a></li>
+								</ul>
+							</li>
+							<li class="dropdown"><a href="#">Blog</a>
+								<ul>
+									<li><a href="#">Blog Standard</a></li>
+									<li><a href="#">Blog Single</a></li>
+									<li><a href="#">Visit Templatemo</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Archives</a></li>
+							<li><a href="../contact/contact.html">Contact</a></li>
+						</ul>
+					</nav> 
+				</div> 
 			</div> 
 		</div> 
-	</header> 
-
+    </header>
 
 	<!-------------------------------- Home Intro ( Header Image ) -------------------------------->
 
@@ -101,7 +86,6 @@
 	    </div> 
 	</section> 
 
-
 	<!-------------------------------- Home Intro ( The bar below the header image ) -------------------------------->
 
 	<section id="cta">
@@ -110,7 +94,6 @@
 			<a href="#" class="cta-button accent-color">Visit templatemo<i class="icon-button fa fa-arrow-right"></i></a>
 		</div> 
 	</section> 
-
 
 	<!-------------------------------- Home Intro ( The bar below the header image ) -------------------------------->
 
@@ -184,7 +167,6 @@
 
 	</section>
 
-
 	<!-------------------------------- Portfolio -------------------------------->
 
 	<section id="portfolio">
@@ -193,13 +175,15 @@
 			<p>Everything you need to create a professional website.</p>
 		</div>
 
-
 		<div class="cards-container">
 			<div class="cards">
 				<div class="card">
 					<div class="image-wrapper">
 						<img src="../images/project1.jpg" class="col-3">
 						<div class="overlay">
+							<!-- Unicode for two-arrow expand icon -->
+							<div class="expand-icon" onclick="openFullscreen(this)">&#x2922;</div>
+
 							<span>Dashboard Template</span>
 							<h3><a href="#">Visual Admin</a></h3>
 						</div>
@@ -210,6 +194,9 @@
 					<div class="image-wrapper">
 						<img src="../images/project2.jpg" class="col-3">
 						<div class="overlay">
+							<!-- Unicode for two-arrow expand icon -->
+							<div class="expand-icon" onclick="openFullscreen(this)">&#x2922;</div>
+
 							<span>Mobile Ready</span>
 							<h3><a href="#">Compass Template</a></h3>
 						</div>
@@ -220,6 +207,9 @@
 					<div class="image-wrapper">
 						<img src="../images/project3.jpg" class="col-3">
 						<div class="overlay">
+							<!-- Unicode for two-arrow expand icon -->
+							<div class="expand-icon" onclick="openFullscreen(this)">&#x2922;</div>
+
 							<span>Responsive Design</span>
 							<h3><a href="#">Awesome Theme</a></h3>
 						</div>
@@ -230,6 +220,9 @@
 					<div class="image-wrapper">
 						<img src="../images/project4.jpg" class="col-3">
 						<div class="overlay">
+							<!-- Unicode for two-arrow expand icon -->
+							<div class="expand-icon" onclick="openFullscreen(this)">&#x2922;</div>
+
 							<span>Portfolio</span>
 							<h3><a href="#">Volton Personal Site</a></h3>
 						</div>
@@ -240,6 +233,9 @@
 					<div class="image-wrapper">
 						<img src="../images/project5.jpg" class="col-3">
 						<div class="overlay">
+							<!-- Unicode for two-arrow expand icon -->
+							<div class="expand-icon" onclick="openFullscreen(this)">&#x2922;</div>
+
 							<span>Green</span>
 							<h3><a href="#">Rectangle Design</a></h3>
 						</div>
@@ -250,6 +246,9 @@
 					<div class="image-wrapper">
 						<img src="../images/project6.jpg" class="col-3">
 						<div class="overlay">
+							<!-- Unicode for two-arrow expand icon -->
+							<div class="expand-icon" onclick="openFullscreen(this)">&#x2922;</div>
+
 							<span>Portfolio</span>
 							<h3><a href="#">Masonry Gallery</a></h3>
 						</div>
@@ -260,6 +259,9 @@
 					<div class="image-wrapper">
 						<img src="../images/project7.jpg" class="col-3">
 						<div class="overlay">
+							<!-- Unicode for two-arrow expand icon -->
+							<div class="expand-icon" onclick="openFullscreen(this)">&#x2922;</div>
+
 							<span>Branding / Identity</span>
 							<h3><a href="#">Gloss Template</a></h3>
 						</div>
@@ -270,12 +272,16 @@
 					<div class="image-wrapper">
 						<img src="../images/project8.jpg" class="col-3">
 						<div class="overlay">
+							<!-- Unicode for two-arrow expand icon -->
+							<div class="expand-icon" onclick="openFullscreen(this)">&#x2922;</div>
+
 							<span>Illustration / Identity</span>
 							<h3><a href="#">Ion Template</a></h3>
 						</div>
 					</div>
 				</div>
 
+				
 			</div>
 		</div>
 		
@@ -309,8 +315,8 @@
 		
 	</section>
 
-
 	<!-------------------------------- Meet The Staff ( Team Members ) Part  -------------------------------->
+
 	<section id="team-container">
 		<div class="team-title">
 			<h2>Meet our happy staff</h2>
@@ -357,16 +363,59 @@
 		</div>
 	</section>
 
+	<!-------------------------------- Blog Posts Section -------------------------------->
 
+	<section id="blog-container">
 
-    <!-------------------------------- Footer -------------------------------->
+		<div class="blog-section-header">
+			<h2 class="section-title">Recent from our blog</h2>
+			<p class="section-desc">Everything you need to create a professional website.</p>
+		</div>
+
+		<div class="blog-info col-2">
+
+			<div class="blog-post">
+				<div class="post-image">
+					<a href="#"><img src="../images/blogthumb1.jpg" alt="" class="img-circle"></a>
+				</div>
+				<div class="blog-post-content">
+					<h4 class="post-title"><a href="#">Getting Creative With the Google Maps API</a></h4>
+					<span class="post-date">12 February 2084</span>
+				</div>
+			</div> 
+	
+			<div class="blog-post">
+				<div class="post-image">
+					<a href="#"><img src="../images/blogthumb2.jpg" alt="" class="img-circle"></a>
+				</div>
+				<div class="blog-post-content">
+					<h4 class="post-title"><a href="#">Design Deliverables – easily share project</a></h4>
+					<span class="post-date">10 February 2084</span>
+				</div>
+			</div> 
+	
+			<div class="blog-post">
+				<div class="post-image">
+					<a href="#"><img src="../images/blogthumb3.jpg" alt="" class="img-circle"></a>
+				</div>
+				<div class="blog-post-content">
+					<h4 class="post-title"><a href="#">Using Templates to Get Your Clients Thinking</a></h4>
+					<span class="post-date">8 February 2084</span>
+				</div>
+			</div> 
+
+		</div>
+
+	</section>
+
+    <!-------------------------------- Footer Seection -------------------------------->
 
     <footer class="site-footer">
 		<div class="col-md-12">
 			<nav class="footer-nav">
 				<ul class="footer-menu">
-					<li><a href="home_page.html">Home</a></li>
-					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="../Home Page/home_page.html">Home</a></li>
+					<li><a href="../Portfolio-Grid.html">Portfolio</a></li>
 					<li><a href="#">Blog Posts</a></li>
 					<li><a href="#">Shortcodes</a></li>
 					<li><a href="../contact/contact.html">Contact</a></li>
@@ -379,7 +428,7 @@
 	</footer> 
 
     <!-------------------------------- Script -------------------------------->
-    <script src="home_page_script.js"></script>
+    <script src="../Home Page/home_page_script.js"></script>
 
 </body>
 </html>

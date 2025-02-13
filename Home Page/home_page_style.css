@@ -22,138 +22,88 @@ a
     text-decoration: none;
 }
 
-/* Grid Styling ( For Responsiveness ) */
-
-.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-10, .col-sm-10, .col-md-10, 
-.col-lg-10, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-7, .col-sm-7, .col-md-7, 
-.col-lg-7, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-4, .col-sm-4, .col-md-4, 
-.col-lg-4, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 
-{
-    position: relative; 
-    min-height: 1px; 
-    padding-left: 20px; 
-    padding-right: 20px; 
-}
-
-
-.col-md-1 { width: 8.33333%; }
-.col-md-2 { width: 16.66667%; }
-.col-md-3 { width: 25%; }
-.col-md-4 { width: 33.33333%; }
-.col-md-5 { width: 41.66667%; }
-.col-md-6 { width: 50%; }
-.col-md-7 { width: 58.33333%; }
-.col-md-8 { width: 66.66667%; }
-.col-md-9 { width: 75%; }
-.col-md-10 { width: 83.33333%; }
-.col-md-11 { width: 91.66667%; }
-.col-md-12 { width: 100%; }
-
-
-.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 { position: relative; min-height: 1px; padding-left: 20px; padding-right: 20px; }
-
-.col-xs-12, .col-xs-11, .col-xs-10, .col-xs-9, .col-xs-8, .col-xs-7, .col-xs-6, .col-xs-5, .col-xs-4, .col-xs-3, .col-xs-2, .col-xs-1 { float: left; }
-
-.col-xs-1 { width: 8.33333%; }
-
-.col-xs-2 { width: 16.66667%; }
-
-.col-xs-3 { width: 25%; }
-
-.col-xs-4 { width: 33.33333%; }
-
-.col-xs-5 { width: 41.66667%; }
-
-.col-xs-6 { width: 50%; }
-
-.col-xs-7 { width: 58.33333%; }
-
-.col-xs-8 { width: 66.66667%; }
-
-.col-xs-9 { width: 75%; }
-
-.col-xs-10 { width: 83.33333%; }
-
-.col-xs-11 { width: 91.66667%; }
-
-.col-xs-12 { width: 100%; }
-
-
 /************************************* Responsive Menu Before Header ( For Smaller Screens ) *************************************/
-.responsive_menu 
+.menu-toggle-btn 
 {
-    padding: 20px;
-    background-color: rgba(49, 55, 58, 0.98);
     display: none;
-    position: relative;
-    z-index: 9999;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 10000;
 }
 
-.main-nav ul, .main_menu, .main_menu li ul 
+#responsive_menu 
+{
+    display: none;
+    background: rgba(49, 55, 58, 0.98);
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    /* text-align: center; */
+    text-align: left;
+    z-index: 9999;
+    padding: 10px 0;
+}
+
+#responsive_menu ul 
 {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.main_menu li 
+#responsive_menu ul li 
 {
-    border-bottom: 1px solid #485156;
     padding: 10px 0;
-  
 }
 
-.main_menu li:first-child 
+#responsive_menu ul li ul
 {
-    padding-top: 0;
-} 
-  
-.main_menu li:last-child 
-{
-    border-bottom: none;
-    padding-bottom: 0;
+    margin-left: 40px;
 }
 
-.main_menu li a 
+#responsive_menu ul li a 
 {
-    font-size: 14px;
-    font-family: "Raleway", sans-serif;
     color: #bfbfbf;
-    font-weight: 500;
-}
-
-.main_menu li ul li 
-{
+    font-size: 15px;
+    text-decoration: none;
     margin-left: 20px;
 }
- 
-.main_menu li ul li:first-child 
+
+@media (max-width: 1000px) 
 {
-    border-top: 1px solid #485156;
-    padding-top: 8px;
-    margin-top: 10px;
+    .main-navigation 
+    {
+        display: none;
+    }
+    .menu-toggle-btn 
+    {
+        display: block;
+    }
 }
 
-.main_menu li ul li:before 
+#responsive_menu.active
 {
-    content: '-';
-    color: gray;
-    margin-right: 10px;
+    display: block;    
 }
 
 
 /************************************* Header Bar *************************************/
-/* Header Styling */
 .site-header 
 {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height : 3%;
     background: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.35);
+    padding: 20px 0;
     z-index: 9999;
+    text-align: center;
+    height : 3%;
     padding: 40px 0;
     transition: padding 0.3s ease-in-out;
     justify-content: center;
@@ -181,83 +131,33 @@ a
 
 .logo img 
 {
-    max-height: 40px; /* Adjust if needed */
+    max-height: 40px; 
     width: auto;
-}
-
-/* Navigation Styling */
-.main-navigation 
-{
-    display: flex;
-    flex-grow: 1;
-    /* Align closer to the logo */
-    justify-content: flex-start; 
-
 }
 
 .main-nav ul 
 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    /* Ensures vertical alignment */
-    align-items: center;
+    justify-content: center;
 }
 
-.main-nav ul li 
-{
-    position: relative;
-    margin-left: 30px;
-}
 
-/* Dropdown Menu */
-.main-nav ul li ul 
+/* Add Down Arrow */
+.main-nav li.dropdown > a::after 
 {
+    /* Unicode down arrow */
+    content: "▼"; 
+    font-size: 12px;
+    /* Match text color */
+    color: #31373a; 
     position: absolute;
-    display: none;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    margin-top: 5px;
-    width: 220px;
-    border: 2px solid #f1f4f5;
-}
-
-.main-nav ul li ul li 
-{
-    width: 100%;
-    border-bottom: 1px solid #dce4e6;
-}
-
-.main-nav ul li ul li:last-child 
-{
-    border-bottom: none;
-}
-
-.main-nav ul li:hover > ul 
-{
-    display: block;
-}
-
-/* Menu Links */
-.main-nav ul li a 
-{
-    color: #31373a;
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-family: "Raleway", sans-serif;
-    padding: 10px 15px;
-    display: block;
-    border-radius: 3px;
-}
-
-.main-nav ul li a:hover, .main-nav ul li ul li a:hover, .main-nav ul li.active a , .service-icon-wrap i , .service-content-wrap a
-{
-    color: #00a8d6;
-}
-
-.main-nav ul li.active a 
-{
-    background-color: #f1f4f5;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
 }
 
 /* Style Dropdown Indicator */
@@ -283,6 +183,52 @@ a
     transition: transform 0.3s ease;
 }
 
+.main-nav ul li 
+{
+    margin: 0 15px;
+    position: relative;
+}
+
+.main-nav ul li a:hover, .main-nav ul li ul li a:hover, .main-nav ul li.active a , .service-icon-wrap i , .service-content-wrap a
+{
+    color: #00a8d6;
+}
+
+.main-nav ul li.active a 
+{
+    background-color: #f1f4f5;
+}
+
+.main-nav ul li a 
+{
+    text-decoration: none;
+    color: #31373a;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 10px;
+    display: block;
+    font-family: "Raleway", sans-serif;
+}
+
+/* Dropdown Menu */
+.main-nav ul li ul 
+{
+    position: absolute;
+    display: none;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* z-index: 999; */
+    margin-top: 5px;
+    width: 220px;
+    border: 2px solid #f1f4f5;
+}
+
+.main-nav ul li:hover ul 
+{
+    display: block;
+}
+
 .main-nav ul li ul li a 
 {
     background-color: transparent;
@@ -291,57 +237,10 @@ a
     font-weight: 600;
 }
 
-/* Adjust for Shrinking Header */
-.site-header.site-header-shrink 
-{
-    padding: 15px 0;
-}
-
-
-/* Style for Menu Button (☰) */
-/* .menu-toggle-btn {
-    display: none; /* Initially hidden 
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    background-color: #333;
-    color: white;
-    font-size: 24px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 10000; /* Ensure it's on top 
-}
-
-/* Show menu button on small screens 
-@media (max-width: 1010px) {
-    .menu-toggle-btn {
-        display: block !important;
-    }
-
-    .site-header {
-        display: none !important;
-    }
-
-    /* Responsive menu positioning 
-    .responsive_menu {
-        display: none;
-        position: fixed;
-        top: 60px;
-        right: 15px;
-        background: white;
-        border-radius: 5px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 10px;
-        z-index: 9999;
-    }
-} */
-
-
 /************************************* Home Intro Section ( Header image )  *************************************/
 #homeIntro 
 {
-    background-image: url("homeintro.jpg");
+    background-image: url("../images/homeintro.jpg");
     height: 30%;
 }
 
@@ -393,10 +292,6 @@ a
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
     font-weight: 800;
-    /* -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px; */
     border-radius: 2px;
     margin-left: 15px;
 }
@@ -442,10 +337,6 @@ i
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
     font-weight: 700;
-    /* -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px; */
     border-radius: 2px;
 }
   
@@ -579,7 +470,6 @@ a.cta-button.accent-color  , .fa-arrow-right
     width: 380px;
     height: 300px;
     overflow: hidden;
-    /* bottom: 0; */
     text-align: left;
 }
 
@@ -599,20 +489,12 @@ a.cta-button.accent-color  , .fa-arrow-right
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #00a8d6; /* Semi-transparent overlay */
+    background-color: #00a8d6; 
     display: flex;
     flex-direction: column;
-
-    /* Align content to left */
-    /* align-items: flex-start;  */
-    /* Align content to bottom */
     justify-content: flex-end; 
-
-
-    /* align-items: center; */
-    /* justify-content: center; */
     color: white;
-    transform: scale(0); /* Initially hidden */
+    transform: scale(0); 
     transition: transform 0.3s ease-in-out;
 }
 
@@ -629,12 +511,8 @@ a.cta-button.accent-color  , .fa-arrow-right
     /* padding : top-right-bottom-left */
     padding-left: 20px; 
     padding-bottom: 10px;
-
-    /* margin-left: 20px; */
-    /* margin-top: 10px; */
     margin: 0px;
     font-size: 15px;
-    /* text-align: left; */
 }
 
 .overlay h3 a 
@@ -643,6 +521,27 @@ a.cta-button.accent-color  , .fa-arrow-right
     color: white;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* Icon to expand the portflio project card */
+.expand-icon
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* Light grey rectangular background */
+    background: #e7f7fb; 
+    color: black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /************************************* Feedbacks Section *************************************/
@@ -669,7 +568,6 @@ a.cta-button.accent-color  , .fa-arrow-right
 
 .author 
 {
-    /* margin-bottom: 20px; */
     color: #aaaaaa;
 }
 
@@ -735,8 +633,6 @@ a.cta-button.accent-color  , .fa-arrow-right
     margin-bottom: 50px;
 }
 
-
-
 /* Individual Member Card */
 .team-member 
 {
@@ -752,7 +648,6 @@ a.cta-button.accent-color  , .fa-arrow-right
     object-fit: cover;
     border-radius: 5px;
 }
-
 
 /* Role Tag Styling */
 .member-info 
@@ -792,6 +687,109 @@ a.cta-button.accent-color  , .fa-arrow-right
 }
 
 
+/************************************* Blogs Section in Home Page *************************************/
+#blog-container 
+{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    padding: 20px 0;
+    text-align: center;
+    
+    /* Background image */
+    background-image: url('../images/blogPosts.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    /* Background animation ( moves slightly up and down to return back to default state ) */
+    animation: moveBackground 2s infinite alternate ease-in-out;
+
+    /* Dark background overlay */
+    background-color: rgba(0, 0, 0, 0.5); 
+    background-blend-mode: darken;
+
+    /* 🔹 Flexbox Centering */
+    display: flex;
+    flex-direction: column;
+} 
+
+@keyframes moveBackground 
+{
+    0% { background-position: center 0px; }
+    100% { background-position: center -15px; }
+}
+
+.section-title
+{
+    font-size: 30px;
+}
+
+.section-desc
+{
+    color: white;
+}
+
+.blog-info 
+{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    /* Space between posts */
+    gap: 20px; 
+    margin-top: 50px;
+    margin-left: 75px;
+}
+
+.blog-post 
+{
+    display: flex;
+    align-items: center;
+    text-align: left; 
+}
+
+.post-image img 
+{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+}
+
+.blog-post-content 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 10px;
+    /* Space between image and text */
+    margin-left: 10px; 
+    justify-content: center;
+
+}
+
+.post-title 
+{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px; /* Decreased space between title and date */
+    width: 80%;
+}
+
+.post-title a 
+{
+    text-decoration: none;
+    color: white;
+}
+
+.post-date 
+{
+    font-size: 12px;
+    color: white;
+}
+
+  
 /************************************* Footer *************************************/
 .site-footer 
 {
